@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controlador.VentanaSecundariaController">
+   <children>
+      <Button fx:id="b_volver" layoutX="416.0" layoutY="315.0" mnemonicParsing="false" onAction="#borrar" prefHeight="26.0" prefWidth="104.0" text="Borrar linea" wrapText="true" />
+      <Button fx:id="b_cerrar" layoutX="417.0" layoutY="354.0" mnemonicParsing="false" onAction="#cerrar_ventana" prefHeight="26.0" prefWidth="104.0" text="Volver" />
+      <TableView fx:id="Vistaelementos" layoutX="20.0" layoutY="48.0" prefHeight="313.0" prefWidth="367.0">
+         <columns>
+            <TableColumn fx:id="c_nombre" prefWidth="107.33330726623535" text="Nombre" />
+            <TableColumn fx:id="c_apellidos" prefWidth="91.3333740234375" text="Apellidos" />
+            <TableColumn fx:id="c_apodo" prefWidth="82.00001525878906" text="Apodo" />
+            <TableColumn fx:id="c_curso" prefWidth="74.0" text="Curso" />
+         </columns>
+      </TableView>
+      <CheckBox fx:id="check_item1" layoutX="406.0" layoutY="80.0" mnemonicParsing="false" onAction="#item1_changed" text="Nombre" />
+      <CheckBox fx:id="check_item2" layoutX="406.0" layoutY="111.0" mnemonicParsing="false" onAction="#item2_changed" text="Apellidos" />
+      <Label layoutX="406.0" layoutY="48.0" text="Ordenar por:" />
+      <Button fx:id="b_añadir" layoutX="416.0" layoutY="268.0" mnemonicParsing="false" onAction="#añadir" prefHeight="25.0" prefWidth="104.0" text="Añadir" />
+      <Text fx:id="linea_borrada" layoutX="33.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Se ha borrado una línea" visible="false" />
+      <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="575.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem fx:id="menu_guardar" mnemonicParsing="false" onAction="#menu_guardar" text="Guardar" />
+                  <MenuItem fx:id="menu_salir" mnemonicParsing="false" onAction="#salir" text="Salir" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edición">
+               <items>
+                  <MenuItem fx:id="menu_borrar" mnemonicParsing="false" onAction="#menu_borrar" text="Borrar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem fx:id="menu_ayuda" mnemonicParsing="false" onAction="#menu_ayuda" text="Acerca de" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

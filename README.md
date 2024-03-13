@@ -1,3 +1,3 @@
 # Practica 7_4 SOL
 
-Solución propuesta a la práctica 7.4 de JavaFX usando *TableView* y varias funciones adicionales.
+Solución propuesta al modelo de la **práctica 7.4** usando *TableView* en JavaFX con algunas funciones adicionales.
